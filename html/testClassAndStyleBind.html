@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+
+</head>
+<body>
+
+<!-- 测试 Class 与 Style 绑定 -->
+
+<h2>绑定class</h2>
+
+<h4>对象语法</h4>
+<div class="testClassAndStyleBind0">
+    <div class="static" v-bind:class="{ 'class-a': isA, 'class-b': isB }"></div>
+</div>
+
+<div class="testClassAndStyleBind1">
+    <div v-bind:class="classObject"></div>
+</div>
+
+<h4>计算模式</h4>
+<div class="testClassAndStyleBind2">
+    <div class="{{ getCN }}"></div>
+</div>
+
+<h4>数组语法</h4>
+<div class="testClassAndStyleBind3">
+    <div v-bind:class="[classA, classB]"></div>
+    <div v-bind:class="[classA, isB ? classB : '']"></div>
+</div>
+
+
+
+<h2>绑定内联样式</h2>
+
+<h4>对象语法</h4>
+<div class="testClassAndStyleBind4">
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">绑定内联样式--对象语法</div>
+</div>
+<div class="testClassAndStyleBind5">
+    <div v-bind:style="styleObject">绑定内联样式--对象语法</div>
+</div>
+
+<h4>数组语法</h4>
+<div class="testClassAndStyleBind6">
+    <div v-bind:style="[styleObjectA, styleObjectB]">绑定内联样式--数组语法</div>
+</div>
+
+<div class="testClassAndStyleBind7">
+    <input type="text" {{ a }} />
+
+</div>
+
+
+<script src="../js/testClassAndStyleBind.js"></script>
+
+</body>
+</html>

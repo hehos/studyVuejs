@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="demoRepeat">
+    <li v-for="item in items" track-by="_uid" class="itme-{{ $index }}">
+        {{$index}} - {{parentMsg}} {{item.childMsg}}
+    </li>
+</ul>
+
+
+<dl id="demoTemplate">
+    <template v-for="item in items">
+        <dt>{{ item.title }}</dt>
+        <dd v-for="subitem in item.subItems">{{ subitem }}</dd>
+    </template>
+</dl>
+
+
+<ul id="users">
+    <li v-for="user in users">
+        {{user.name}} - <a href="">{{user.email}}</a>
+    </li>
+</ul>
+
+
+<ul id="repeat-object" class="demo">
+    <li v-for="value in object">
+        {{ $key }} : {{ value }}
+    </li>
+    <li v-for="(key, val) in object">
+        {{ key  }} : {{ val }}
+    </li>
+</ul>
+
+<!--<div>-->
+    <!--<span v-for="n in 10">重复模板次数 {{ n }} </span>-->
+<!--</div>-->
+
+
+<div id="for-num">
+    <span v-for="n in 10">{{ n }} </span>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+<script src="../js/test-v-for.js"></script>
+</body>
+</html>

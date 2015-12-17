@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="example">
+    <button v-on:click="greet">Greet</button>
+</div>
+
+<div id="example-2">
+    <form action="test.do">
+        <button type="button" v-on:click="say('hi')">Say Hi</button>
+        <button type="button" v-on:click="say('what')">Say What</button>
+        <button type="submit" v-on:click="preventDef('阻止默认事件行为', $event)">
+            访问原生事件阻止事件默认行为</button>
+    </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+<script src="../js/testEvent.js"></script>
+</body>
+</html>
