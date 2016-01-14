@@ -31,6 +31,9 @@ new Vue({
         preventDef: function(msg, event) {
             alert(msg);
             event.preventDefault()
+        },
+        onKeyup: function() {
+            alert('延迟执行');
         }
     }
 })

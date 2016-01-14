@@ -12,6 +12,6 @@ new Vue({
 new Vue({
     el: '.test2',
     data: {
-        ok: false
+        ok: true
     }
 });

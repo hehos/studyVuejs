@@ -63,5 +63,5 @@ new Vue({
 })
 
 new Vue({
-    el: '#for-num',
+    el: '#for-num'
 });

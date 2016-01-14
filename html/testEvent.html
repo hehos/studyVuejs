@@ -16,6 +16,9 @@
         <button type="button" v-on:click="say('what')">Say What</button>
         <button type="submit" v-on:click="preventDef('阻止默认事件行为', $event)">
             访问原生事件阻止事件默认行为</button>
+
+        <h3>键盘松开时延迟0.5秒弹出提示，在提示框的时候比较实用</h3>
+        <input @keyup="onKeyup | debounce 500">
     </form>
 </div>
 
